@@ -32,20 +32,16 @@ This project shows how **financial computation, machine learning, and cloud appl
 ## 🛠 Installation
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/<your-username>/peakportfolio.ai-open.git
-cd peakportfolio.ai-open
 
-# 2. Install dependencies
+# 1. Install dependencies
 pip install -r requirements.txt
 
-# 3. Set environment variables
+# 2. Set environment variables
 # Create a .env file in the project root with:
 TIINGO_API_KEY=your_tiingo_key
 OPENAI_API_KEY=your_openai_key
-FIREBASE_CREDENTIALS_PATH=path_to_your_firebase.json
 
-# 4. Run locally
+#3. Run locally
 streamlit run app.py
 ```
 
