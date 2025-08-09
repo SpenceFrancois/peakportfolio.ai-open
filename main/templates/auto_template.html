@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Portfolio Report</title>
+  <style>
+    /* Base Styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #333;
+    }
+    
+    body {
+      padding: 3px;
+    }
+    
+    .container {
+      position: relative; /* Added for footer positioning */
+      width: 90vw;           /* Responsive width */
+      max-width: 700px;      /* Maximum width for larger screens */
+      aspect-ratio: 8 / 10;   /* Maintains the 8:10 (or 4:5) ratio */
+      margin: 5px auto;
+      padding: 12px;
+      border: 1px solid #0a4daa;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+      background: #fff;
+    }
+    
+    .content-wrapper {
+      margin: 0 auto;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .logo-container {
+      text-align: right;
+      margin-bottom: -30px;
+      padding: 0;
+    }
+    
+    .logo {
+      max-width: 320px;
+      width: 230px;
+      height: auto;
+      opacity: 0.9;
+      padding-bottom: 0;
+    }
+    
+    .section {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+    
+    .section h2 {
+      border-bottom: 1px solid #0a4daa;
+      padding-bottom: 4px;
+      margin-top: 25px;
+      margin-bottom: 12px;
+      font-size: 15px;
+      color: #0a4daa;
+      text-align: left;
+      font-weight: bold;
+    }
+    
+    .chart-container {
+      text-align: center;
+      margin: 5px 0;
+    }
+    
+    .chart-container img {
+      max-width: 100%;
+      max-height: 400px;
+      height: auto;
+      border-radius: 2px;
+      border: 1px solid #0a4daa;
+    }
+    
+    /* Styled Table */
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10px;
+      background: #fff;
+      border: 1px solid #c5c5c5;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      outline: 1px solid #0a4daa;
+      outline-offset: -1px;
+      border: 1px solid #0a4daa;
+    }
+    
+    .styled-table th, .styled-table td {
+      padding: 4px;
+      border: 0.5px solid #ddd;
+      text-align: center;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    
+    .styled-table th {
+      background-color: #0a4daa;
+      color: #fff;
+      font-weight: bold;
+    }
+    
+    .styled-table td:nth-child(2),
+    .styled-table th:nth-child(2) {
+      max-width: 100px;
+      white-space: normal;
+    }
+    
+    .styled-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+  /* Container, if you want a little top margin still */
+  .stButton {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  /* Base button styling + force your font rules down into the label */
+  .stButton button,
+  .stButton button * {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    
+  }
+
+  /* Make it fill its parent, add gradient, round corners, etc */
+  .stButton button {
+    width: 100%;
+    max-width: 250px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #0a4daa 0%, #007bb8 100%);
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap; /* optional: prevent wrapping */
+  }
+
+  /* Light-sweep pseudo-element */
+  .stButton button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-25deg);
+    transition: transform 0.7s ease;
+  }
+
+  /* Trigger the sweep on focus, remove default outline */
+  .stButton button:focus::before {
+    transform: translateX(380%) skewX(-25deg);
+    outline: none;
+  }
+
+  /* Remove the default hover/active transform, then add subtle press */
+  .stButton button:hover,
+  .stButton button:active {
+    transform: none;
+  }
+  .stButton button:active {
+    transform: scale(0.98);
+  }
+
+  /* Mobile tweak */
+  @media (max-width: 480px) {
+    .stButton button {
+      padding: 12px 24px;
+      font-size: 20px !important;
+    }
+  }
+    
+    details {
+      background-color: #fbfcfc !important;
+    }
+    
+    /* Modal Styles */
+    #modalOverlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+    
+    #optionsModal {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    #optionsModal button {
+      margin: 5px;
+      padding: 6px 12px;
+      background-color: #069de1;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    
+    /* Footer Style */
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-right: 20px;
+      color: #696969; /* Warm grey */
+    }
+    
+    /* Mobile Responsiveness */
+    @media only screen and (max-width: 480px) {
+      .content-wrapper {
+        padding: 8px;
+      }
+      
+      .logo {
+        width: 125px;
+        margin-top: -30px;
+      }
+      
+      .section {
+        font-size: 10px;
+      }
+      
+      .section h2 {
+        font-size: 10px;
+      }
+      
+      .styled-table {
+        font-size: 6px;
+      }
+      
+      .styled-table th, .styled-table td {
+        padding: 2px;
+      }
+      
+      .stButton button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+      
+      #optionsModal button {
+        padding: 4px 8px;
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content-wrapper">
+      <!-- Right-Aligned Logo -->
+      <div class="logo-container">
+        <!-- Using the PNG version of the logo -->
+        <img src="{{ logo_data_uri }}" alt="Logo" class="logo">
+      </div>
+      <!-- Performance Comparison Section -->
+      <div class="section">
+        <h2>Portfolio vs. Benchmark</h2>
+        <div class="chart-container">
+          <img src="{{ line_chart_url }}" alt="Performance Line Chart">
+        </div>
+      </div>
+      <!-- Asset Allocation Section -->
+      <div class="section">
+        <h2>Top Allocations</h2>
+        {{ allocation_table | safe }}
+      </div>
+      <!-- Portfolio Summary Section -->
+      <div class="section">
+        <h2>Portfolio Summary</h2>
+        {{ summary_table | safe }}
+      </div>
+    </div>
+    <!-- Footer added seamlessly -->
+    <footer class="footer">peakportfolio.ai</footer>
+  </div>
+  
+  <!-- Share/Download Button -->
+  <div class="stButton" id="actionButtons">
+    <button id="shareDownloadButton">Download &amp; Share</button>
+  </div>
+  
+  <!-- Modal Overlay and Options Modal -->
+  <div id="modalOverlay"></div>
+  <div id="optionsModal">
+    <p>Select an action:</p>
+    <button id="downloadImageBtn">Download Image</button>
+    <button id="redditShareBtn">Share to Reddit</button>
+    <br>
+    <button id="closeModalBtn">Close</button>
+  </div>
+  
+  <!-- Required Library for Image Conversion -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const shareDownloadButton = document.getElementById('shareDownloadButton');
+      const modalOverlay = document.getElementById('modalOverlay');
+      const optionsModal = document.getElementById('optionsModal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const downloadImageBtn = document.getElementById('downloadImageBtn');
+      const redditShareBtn = document.getElementById('redditShareBtn');
+      const reportContainer = document.querySelector('.container');
+      const reportUrl = window.location.href;
+      
+      // Functions to show/hide the modal
+      function showModal() {
+        modalOverlay.style.display = 'block';
+        optionsModal.style.display = 'block';
+      }
+      function hideModal() {
+        modalOverlay.style.display = 'none';
+        optionsModal.style.display = 'none';
+      }
+      
+      // Capture the report container as a Blob using html2canvas,
+      // wrapping it in a temporary container with an extra 5px padding on all sides.
+      function captureReportBlob(callback) {
+        // Clone the report container so that the live view is unaffected.
+        const reportClone = reportContainer.cloneNode(true);
+        
+        // Create a temporary wrapper with extra 5px padding.
+        const wrapper = document.createElement('div');
+        wrapper.style.padding = "5px";  // Extra 5px on all sides
+        wrapper.style.backgroundColor = "#ffffff";  // Ensure the background matches
+        wrapper.appendChild(reportClone);
+        
+        // Position the wrapper off-screen.
+        wrapper.style.position = "absolute";
+        wrapper.style.top = "-10000px";
+        document.body.appendChild(wrapper);
+        
+        // Capture the wrapper (with extra padding) as a canvas.
+        html2canvas(wrapper, { useCORS: true }).then(canvas => {
+          canvas.toBlob(blob => {
+            if (blob) {
+              callback(blob);
+            } else {
+              console.error('Failed to convert canvas to blob.');
+            }
+            document.body.removeChild(wrapper);
+          });
+        });
+      }
+      
+      // Fallback download: creates a link to download the image file
+      function downloadReport(blob) {
+        const link = document.createElement('a');
+        link.download = 'portfolio_report.png';
+        link.href = URL.createObjectURL(blob);
+        link.click();
+      }
+      
+      // Share the report using the Web Share API (with file support if available)
+      function shareReport(blob) {
+        const file = new File([blob], 'portfolio_report.png', { type: blob.type });
+        
+        // Attempt file sharing if supported
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          navigator.share({
+            files: [file],
+            title: 'Portfolio Report',
+            text: 'Check out my portfolio report!'
+          })
+          .then(() => {
+            console.log('Share successful');
+          })
+          .catch(error => {
+            console.error('File share failed:', error);
+            // Fallback to URL sharing or download
+            shareOrDownload(blob);
+          });
+        } else {
+          // If file sharing is not available, try sharing the URL
+          shareOrDownload(blob);
+        }
+      }
+      
+      // Fallback: share the report URL if available, otherwise trigger a download
+      function shareOrDownload(blob) {
+        if (navigator.share) {
+          navigator.share({
+            title: 'Portfolio Report',
+            text: 'Check out my portfolio report!',
+            url: reportUrl
+          })
+          .then(() => {
+            console.log('URL share successful');
+          })
+          .catch(error => {
+            console.error('URL share failed:', error);
+            downloadReport(blob);
+          });
+        } else {
+          downloadReport(blob);
+        }
+      }
+      
+      // Function to share the report directly to Reddit via a new window
+      function shareToReddit() {
+        const encodedUrl = encodeURIComponent(reportUrl);
+        window.open(`https://www.reddit.com/submit?url=${encodedUrl}`, '_blank');
+        hideModal();
+      }
+      
+      // Main button action: capture and share the report image
+      shareDownloadButton.addEventListener('click', function() {
+        captureReportBlob(function(blob) {
+          shareReport(blob);
+        });
+      });
+      
+      // Modal button action: capture and share the report image
+      downloadImageBtn.addEventListener('click', function() {
+        captureReportBlob(function(blob) {
+          shareReport(blob);
+          hideModal();
+        });
+      });
+      
+      // Modal button action for Reddit sharing
+      redditShareBtn.addEventListener('click', shareToReddit);
+      
+      // Close modal on button click or overlay click
+      closeModalBtn.addEventListener('click', hideModal);
+      modalOverlay.addEventListener('click', hideModal);
+    });
+  </script>
+</body>
+</html>
