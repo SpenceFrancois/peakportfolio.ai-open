@@ -1,5 +1,6 @@
 from tiingo import TiingoClient
-TIINGO_API_KEY = "7be842517180c734d410dccaeab2829b805615a7"
+TIINGO_API_KEY = "PLACE_TIINGO_API_KEY_HERE"
 client = TiingoClient({'api_key': TIINGO_API_KEY})
+
 
 
