@@ -1,71 +1,87 @@
 # PeakPortfolio.ai – Open Source Edition
 
-**PeakPortfolio.ai** is an AI-powered portfolio analysis and optimization platform that combines quantitative finance, machine learning, and intuitive visualization to help investors make better decisions.  
-This repository contains the **open-source version** of the core application, allowing you to run it locally, explore the algorithms, and extend the platform.
+**PeakPortfolio.ai** is an AI-powered portfolio analysis and optimization platform that blends quantitative finance, market data pipelines, and AI-driven insights into a single, intuitive application. This repository contains the **open-source version** of the app — everything you need to run it locally, explore the algorithms, and extend the features for your own projects.
 
 ---
 
-## 🚀 Overview
+## 📖 Overview
 
-PeakPortfolio.ai integrates:
+Built over **8 months by a single developer**, PeakPortfolio.ai is a demonstration of end-to-end product creation in a specialized domain:
 
-- **Quantitative finance models** – Efficient frontier optimization, Sharpe/Sortino ratios, max drawdown, dividend yield strategies, and custom portfolio analysis.
-- **AI-driven insights** – OpenAI integration for contextual portfolio commentary and market event analysis.
-- **Live market data** – Pulls from APIs like Tiingo and Yahoo Finance for up-to-date returns, volatility, and news.
-- **Secure user authentication** – Firebase authentication for account management and subscription handling.
-- **Modern web app** – Built with Streamlit for rapid UI development and rich, interactive dashboards.
+- **Backend Engineering** – APIs, data ingestion, risk and return calculations.
+- **Quantitative Models** – Mean-variance optimization, Sortino and Sharpe analysis, dividend yield targeting, and max drawdown tracking.
+- **AI Integration** – Market event summarization and strategy recommendations powered by OpenAI.
+- **Frontend/UI** – Fully interactive dashboards built with Streamlit.
+- **Authentication & Access Control** – Firebase-backed user management.
+- **Cloud Deployment** – Production-ready for hosting and scaling.
 
-This project was built **end-to-end by a single developer over 8 months**, covering:
-
-- Backend architecture and API integration  
-- Quant modeling & algorithm design  
-- Frontend/UI implementation  
-- Deployment and cloud infrastructure  
-- Data pipeline creation and caching strategies  
+This project shows how **financial computation, machine learning, and cloud application architecture** can be integrated into one cohesive system.
 
 ---
 
-## 📦 Features
+## 🚀 Features
 
 - **Portfolio Optimization** – Mean-variance, dividend-focused, and AI-refined strategies.
-- **Risk Metrics** – Sharpe, Sortino, downside deviation, and max drawdown calculations.
-- **Custom Portfolios** – Analyze your own allocations and simulate performance.
-- **Market Event Summaries** – News scraping and summarization.
-- **Pro Mode (Disabled Here)** – Certain production features are behind paywalls in the live app, but the open-source version provides a complete working environment for local use and experimentation.
+- **Risk Metrics** – Sharpe ratio, Sortino ratio, downside deviation, and maximum drawdown calculations.
+- **Custom Portfolio Analysis** – Define allocations, run backtests, and simulate performance.
+- **Market Event Summaries** – Automatic news retrieval and summarization for portfolio assets.
+- **Pro Mode (Disabled Here)** – Premium-only production features excluded from this release; local version still includes a full analytics environment for experimentation.
 
 ---
 
-## 🛠️ Installation
+## 🛠 Installation
 
-### 1. Clone the repository
 ```bash
+# 1. Clone the repository
 git clone https://github.com/<your-username>/peakportfolio.ai-open.git
 cd peakportfolio.ai-open
 
----
-
-### 2. Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate   # macOS/Linux
-venv\Scripts\activate      # Windows
-
----
-
-### 3. Install dependencies
+# 2. Install dependencies
 pip install -r requirements.txt
 
----
-
-### 4. Install dependencies
+# 3. Set environment variables
+# Create a .env file in the project root with:
 TIINGO_API_KEY=your_tiingo_key
 OPENAI_API_KEY=your_openai_key
 FIREBASE_CREDENTIALS_PATH=path_to_your_firebase.json
 
+# 4. Run locally
+streamlit run app.py
+```
+
 ---
 
-### 5. Run locally
-streamlit run app.py
+## 🌐 Live Version
+A hosted version of PeakPortfolio.ai is available here:  
+[https://peakportfolio.ai](https://peakportfolio.ai)
 
+---
 
-## 🛠️ Live Version
-app.peakportfolio.ai
+## 📄 License
+
+**Custom License** – You may use, modify, and share this software for personal, educational, or research purposes. **Commercial resale or monetization is prohibited.**  
+See [`LICENSE`](LICENSE) for full terms.
+
+---
+
+## 🙌 Acknowledgements
+
+- [Tiingo](https://www.tiingo.com/) – Financial market data
+- [Yahoo Finance](https://pypi.org/project/yfinance/) – Historical data and news
+- [OpenAI](https://openai.com/) – AI-powered market summaries and analysis
+- [Streamlit](https://streamlit.io/) – Application framework
+- [Firebase](https://firebase.google.com/) – Authentication and user management
+
+---
+
+## 💡 Contributing
+
+Contributions are welcome! Fork the repo, make your changes, and submit a pull request.
+
+---
+
+## 🧠 Author
+
+**Developer:** [Your Name]  
+**Role:** Full-stack engineer, data scientist, and designer of PeakPortfolio.ai.  
+Built independently over 8 months as a complete demonstration of technical depth, product thinking, and execution.
