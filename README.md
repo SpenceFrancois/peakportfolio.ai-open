@@ -42,4 +42,30 @@ This project was built **end-to-end by a single developer over 8 months**, cover
 git clone https://github.com/<your-username>/peakportfolio.ai-open.git
 cd peakportfolio.ai-open
 
-Do you want me to add that part?
+---
+
+### 2. Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate   # macOS/Linux
+venv\Scripts\activate      # Windows
+
+---
+
+### 3. Install dependencies
+pip install -r requirements.txt
+
+---
+
+### 4. Install dependencies
+TIINGO_API_KEY=your_tiingo_key
+OPENAI_API_KEY=your_openai_key
+FIREBASE_CREDENTIALS_PATH=path_to_your_firebase.json
+
+---
+
+### 5. Run locally
+streamlit run app.py
+
+
+## 🛠️ Live Version
+app.peakportfolio.ai
