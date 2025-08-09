@@ -53,16 +53,10 @@ streamlit run app.py
 
 ## 🌐 Live Version
 A hosted version of PeakPortfolio.ai is available here:  
-[https://peakportfolio.ai](https://peakportfolio.ai)
+[https://app.peakportfolio.ai](https://app.peakportfolio.ai)
 
 ---
 
-## 📄 License
-
-**Custom License** – You may use, modify, and share this software for personal, educational, or research purposes. **Commercial resale or monetization is prohibited.**  
-See [`LICENSE`](LICENSE) for full terms.
-
----
 
 ## 🙌 Acknowledgements
 
@@ -82,6 +76,4 @@ Contributions are welcome! Fork the repo, make your changes, and submit a pull r
 
 ## 🧠 Author
 
-**Developer:** [Your Name]  
-**Role:** Full-stack engineer, data scientist, and designer of PeakPortfolio.ai.  
-Built independently over 8 months as a complete demonstration of technical depth, product thinking, and execution.
+**Creator:** Spencer Francois 
