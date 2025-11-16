@@ -5,6 +5,39 @@
 ---
 
 ## 📖 Overview
+PeakPortfolio connects portfolio optimization, asset-level data, prompt engineering, and context-aware AI that understands natural language—allowing users to express investment goals in their own words and receive a fully personalized portfolio, constructed, reviewed, and explained by AI agents that emulate the roles of a high-performing wealth management team.
+Backend Transformation Workflow
+Input & Baselines
+Begins with user-supplied asset data and a natural-language investment brief.
+A mean-variance optimization (MVO) engine computes three reference portfolios:
+Minimum Volatility
+Maximum Sharpe Ratio
+Maximum Return
+These serve as performance baselines.
+
+
+Allocator Agent
+Constructs a new portfolio based on the user context, asset list, and MVO benchmarks.
+Optimizes risk-adjusted return while respecting all constraints (ETF floors, crypto caps, position limits).
+Does not provide rationale—only outputs allocations.
+Manager Agent
+Serves as compliance and risk oversight.
+Receives proposed allocations, user context, and computed portfolio metrics (expected return, volatility, Sharpe ratio, Sortino, dividend yield).
+Assesses whether the portfolio is compliant and financially appropriate.
+If violations occur, triggers a reallocation loop (up to three attempts).
+If no compliant solution is found, defaults to the MVO-based balanced portfolio.
+
+
+Explainer Agent
+Delivers a client-ready narrative for each portfolio position.
+Interprets the portfolio in light of the user’s objectives and risk profile
+Explains rationale, expected contribution, and forward-looking outlook for each asset.
+
+
+Finalization
+Approved portfolio is re-evaluated through the quant engine.
+Final output includes allocations, performance metrics, and human-grade explanations.
+Delivered asynchronously to the user in under two minutes.
 
 Built over **8 months by a single developer**, PeakPortfolio.ai is a demonstration of end-to-end product creation in a specialized domain:
 
