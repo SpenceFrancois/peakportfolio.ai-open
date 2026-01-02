@@ -4,7 +4,7 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 PeakPortfolio connects portfolio optimization, asset-level data, prompt engineering, and context-aware AI—allowing users to express investment goals in their own words and receive a personalized portfolio that is constructed, reviewed, and explained by AI agents. The system puts quantitative data into context, then builds a custom portfolio around user intent.
 
