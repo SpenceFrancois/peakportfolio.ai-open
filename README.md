@@ -5,7 +5,7 @@
 ---
 
 ## 📖 Overview
-PeakPortfolio connects portfolio optimization, asset-level data, prompt engineering, and context-aware AI that understands natural language—allowing users to express investment goals in their own words and receive a fully personalized portfolio, constructed, reviewed, and explained by AI agents that emulate the roles of a high-performing wealth management team.
+PeakPortfolio connects portfolio optimization, asset-level data, prompt engineering, and context-aware AI that allows users to express investment goals in their own words and receive a personalized portfolio that is constructed, reviewed, and explained by AI agents putting the data into context and then shaping the portfolio around your intent.
 Backend Transformation Workflow
 Input & Baselines
 Begins with user-supplied asset data and a natural-language investment brief.
@@ -17,16 +17,16 @@ These serve as performance baselines.
 
 
 Allocator Agent
-Constructs a new portfolio based on the user context, asset list, and MVO benchmarks.
-Optimizes risk-adjusted return while respecting all constraints (ETF floors, crypto caps, position limits).
-Does not provide rationale—only outputs allocations.
+Constructs a new portfolio based on the user context, asset list, and reference portfolios.
+Applies all allocation constraints to produce a valid portfolio (ETF floors, crypto caps, position limits).
+Proposes allocations, computes performance results, and turns the portfolio into a deliverable (JSON) for the Manager Agent.
+
 Manager Agent
 Serves as compliance and risk oversight.
 Receives proposed allocations, user context, and computed portfolio metrics (expected return, volatility, Sharpe ratio, Sortino, dividend yield).
 Assesses whether the portfolio is compliant and financially appropriate.
 If violations occur, triggers a reallocation loop (up to three attempts).
 If no compliant solution is found, defaults to the MVO-based balanced portfolio.
-
 
 Explainer Agent
 Delivers a client-ready narrative for each portfolio position.
@@ -39,8 +39,8 @@ Approved portfolio is re-evaluated through the quant engine.
 Final output includes allocations, performance metrics, and human-grade explanations.
 Delivered asynchronously to the user in under two minutes.
 
-Built over **8 months by a single developer**, PeakPortfolio.ai is a demonstration of end-to-end product creation in a specialized domain:
 
+Core system components:
 - **Backend Engineering** – APIs, data ingestion, risk and return calculations.
 - **Quantitative Models** – Mean-variance optimization, Sortino and Sharpe analysis, dividend yield targeting, and max drawdown tracking.
 - **AI Integration** – Market event summarization and strategy recommendations powered by OpenAI.
@@ -48,7 +48,8 @@ Built over **8 months by a single developer**, PeakPortfolio.ai is a demonstrati
 - **Authentication & Access Control** – Firebase-backed user management.
 - **Cloud Deployment** – Production-ready for hosting and scaling.
 
-This project shows how **financial computation, machine learning, and cloud application architecture** can be integrated into one cohesive system.
+
+Built over **8 months by Spencer Francois**, PeakPortfolio.ai demonstrates the integration of portfolio allocation, artificial intelligence, and software engineering into a coherent, easy-to-use system.
 
 ---
 
