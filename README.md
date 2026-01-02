@@ -16,31 +16,31 @@ Maximum Return
 These serve as performance baselines.
 
 
-Allocator Agent
+## Allocator Agent
 Constructs a new portfolio based on the user context, asset list, and reference portfolios.
 Applies all allocation constraints to produce a valid portfolio (ETF floors, crypto caps, position limits).
 Proposes allocations, computes performance results, and turns the portfolio into a deliverable (JSON) for the Manager Agent.
 
-Manager Agent
+## Manager Agent
 Serves as compliance and risk oversight.
 Receives proposed allocations, user context, and computed portfolio metrics (expected return, volatility, Sharpe ratio, Sortino, dividend yield).
 Assesses whether the portfolio is compliant and financially appropriate.
 If violations occur, triggers a reallocation loop (up to three attempts).
 If no compliant solution is found, defaults to the MVO-based balanced portfolio.
 
-Explainer Agent
+## Explainer Agent
 Delivers a client-ready narrative for each portfolio position.
 Interprets the portfolio in light of the user’s objectives and risk profile
 Explains rationale, expected contribution, and forward-looking outlook for each asset.
 
 
-Finalization
+## Finalization
 Approved portfolio is re-evaluated through the quant engine.
 Final output includes allocations, performance metrics, and human-grade explanations.
 Delivered asynchronously to the user in under two minutes.
 
 
-Core system components:
+## Core system components:
 - **Backend Engineering** – APIs, data ingestion, risk and return calculations.
 - **Quantitative Models** – Mean-variance optimization, Sortino and Sharpe analysis, dividend yield targeting, and max drawdown tracking.
 - **AI Integration** – Market event summarization and strategy recommendations powered by OpenAI.
