@@ -5,15 +5,25 @@
 ---
 
 ## 📖 Overview
-PeakPortfolio connects portfolio optimization, asset-level data, prompt engineering, and context-aware AI that allows users to express investment goals in their own words and receive a personalized portfolio that is constructed, reviewed, and explained by AI agents putting the data into context and then shaping the portfolio around your intent.
-Backend Transformation Workflow
-Input & Baselines
-Begins with user-supplied asset data and a natural-language investment brief.
-A mean-variance optimization (MVO) engine computes three reference portfolios:
-Minimum Volatility
-Maximum Sharpe Ratio
-Maximum Return
-These serve as performance baselines.
+
+PeakPortfolio connects portfolio optimization, asset-level data, prompt engineering, and context-aware AI—allowing users to express investment goals in their own words and receive a personalized portfolio that is constructed, reviewed, and explained by AI agents. The system puts quantitative data into context, then shapes each portfolio around user intent rather than rigid parameters.
+
+## Backend Transformation Workflow
+
+### 1. Input & Baselines
+
+The process begins with:
+- User-supplied asset data
+- A natural-language investment brief
+
+A mean-variance optimization (MVO) engine then computes three reference portfolios:
+
+- **Minimum Volatility**
+- **Maximum Sharpe Ratio**
+- **Maximum Return**
+
+These portfolios serve as quantitative performance baselines for downstream analysis and AI-driven portfolio construction.
+
 
 
 ## Allocator Agent
