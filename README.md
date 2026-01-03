@@ -8,8 +8,6 @@ The platform connects portfolio optimization, asset-level data, prompt engineeri
 
 This repository contains the open-source version of the application — everything required to run it locally, explore the underlying algorithms, and extend the system for experimentation or further development.
 
-Built over **8 months by Spencer Francois**, PeakPortfolio.ai demonstrates the integration of portfolio allocation, artificial intelligence, and software engineering into a coherent, easy-to-use system.
-
 
 ---
 
@@ -158,14 +156,14 @@ streamlit run app.py
 
 ---
 
-## 🌐 Live Version
+##  Live Version
 A hosted version of PeakPortfolio.ai is available here:  
 [https://app.peakportfolio.ai](https://app.peakportfolio.ai)
 
 ---
 
 
-## 🙌 Acknowledgements
+##  Acknowledgements
 
 - [Tiingo](https://www.tiingo.com/) – Financial market data
 - [Yahoo Finance](https://pypi.org/project/yfinance/) – Historical data and news
@@ -175,7 +173,7 @@ A hosted version of PeakPortfolio.ai is available here:
 
 ---
 
-## 💡 Contributing
+##  Contributing
 
 Contributions are welcome! Fork the repo, make your changes, and submit a pull request.
 
