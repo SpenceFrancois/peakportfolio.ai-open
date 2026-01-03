@@ -104,7 +104,7 @@ Every portfolio simulation automatically generates downloadable reports, includi
 Reports support company logo integration for presentation-ready outputs.
 
 ---
-### Advanced Data Analysis & Export
+### Data Analysis & Export
 
 - **Risk-Reward Portfolio Table**
   - Displays sortable efficient portfolios with filters for:
