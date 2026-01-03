@@ -8,15 +8,17 @@
 
 PeakPortfolio connects portfolio optimization, asset-level data, prompt engineering, and context-aware AI—allowing users to express investment goals in their own words and receive a personalized portfolio that is constructed, reviewed, and explained by AI agents. The system puts quantitative data into context, then builds a custom portfolio around user intent.
 
+Built over **8 months by Spencer Francois**, PeakPortfolio.ai demonstrates the integration of portfolio allocation, artificial intelligence, and software engineering into a coherent, easy-to-use system.
 
+---
 
 ## Backend Transformation Workflow
 
 ### 1. Input & Baselines
 
 The process begins with:
-- User-supplied asset tickers
-- A natural-language investment brief
+- User-supplied asset tickers  
+- A natural-language investment brief  
 
 A mean-variance optimization (MVO) engine then computes three reference portfolios:
 
@@ -26,52 +28,120 @@ A mean-variance optimization (MVO) engine then computes three reference portfoli
 
 These portfolios serve as quantitative performance baselines for downstream analysis and AI-driven portfolio construction.
 
+---
 
+### Allocator Agent
 
-## Allocator Agent
-Constructs a new portfolio based on the user context, asset list, and reference portfolios.
-Applies all allocation constraints to produce a valid portfolio (ETF floors, crypto caps, position limits).
+Constructs a new portfolio based on the user context, asset list, and reference portfolios.  
+Applies all allocation constraints to produce a valid portfolio (ETF floors, crypto caps, position limits).  
 Proposes allocations, computes performance results, and turns the portfolio into a deliverable (JSON) for the Manager Agent.
-
-## Manager Agent
-Serves as compliance and risk oversight.
-Receives proposed allocations, user context, and computed portfolio metrics (expected return, volatility, Sharpe ratio, Sortino, dividend yield).
-Assesses whether the portfolio is compliant and financially appropriate.
-If violations occur, triggers a reallocation loop (up to three attempts).
-If no compliant solution is found, defaults to the MVO-based balanced portfolio.
-
-## Explainer Agent
-Delivers a client-ready narrative for each portfolio position.
-Interprets the portfolio in light of the user’s objectives and risk profile
-Explains rationale, expected contribution, and forward-looking outlook for each asset.
-
-
-## Finalization
-Approved portfolio is re-evaluated through the quant engine.
-Final output includes allocations, performance metrics, and human-grade explanations.
-Delivered asynchronously to the user in under two minutes.
-
-
-## Core system components:
-- **Backend Engineering** – APIs, data ingestion, risk and return calculations.
-- **Quantitative Models** – Mean-variance optimization, Sortino and Sharpe analysis, dividend yield targeting, and max drawdown tracking.
-- **AI Integration** – Market event summarization and strategy recommendations powered by OpenAI.
-- **Frontend/UI** – Fully interactive dashboards built with Streamlit.
-- **Authentication & Access Control** – Firebase-backed user management.
-- **Cloud Deployment** – Production-ready for hosting and scaling.
-
-
-Built over **8 months by Spencer Francois**, PeakPortfolio.ai demonstrates the integration of portfolio allocation, artificial intelligence, and software engineering into a coherent, easy-to-use system.
 
 ---
 
-## 🚀 Features
+### Manager Agent
 
-- **Portfolio Optimization** – Mean-variance, dividend-focused, and AI-refined strategies.
-- **Risk Metrics** – Sharpe ratio, Sortino ratio, downside deviation, and maximum drawdown calculations.
-- **Custom Portfolio Analysis** – Define allocations, run backtests, and simulate performance.
-- **Market Event Summaries** – Automatic news retrieval and summarization for portfolio assets.
-- **Pro Mode (Disabled Here)** – Premium-only production features excluded from this release; local version still includes a full analytics environment for experimentation.
+Serves as compliance and risk oversight.  
+Receives proposed allocations, user context, and computed portfolio metrics (expected return, volatility, Sharpe ratio, Sortino, dividend yield).  
+Assesses whether the portfolio is compliant and financially appropriate.  
+If violations occur, triggers a reallocation loop (up to three attempts).  
+If no compliant solution is found, defaults to the MVO-based balanced portfolio.
+
+---
+
+### Explainer Agent
+
+Delivers a client-ready narrative for each portfolio position.  
+Interprets the portfolio in light of the user’s objectives and risk profile.  
+Explains rationale, expected contribution, and forward-looking outlook for each asset.
+
+---
+
+### Finalization
+
+Approved portfolio is re-evaluated through the quant engine.  
+Final output includes allocations, performance metrics, and human-grade explanations.  
+Delivered asynchronously to the user in under two minutes.
+
+---
+
+## Portfolio Outputs, Reporting & Data Export
+
+### Portfolio Breakdown & Visualization
+
+- **Pick A Portfolio** – Five interactive tabs displaying different portfolio breakdowns with:
+  - Ticker  
+  - Asset Name  
+  - Asset Type  
+  - Dollar Allocation  
+  - Percent Allocation  
+
+- **Allocation Snapshot**
+  - Donut chart for top-weighted allocations  
+
+- **Portfolio Summary**
+  - Expected Return  
+  - Sharpe Ratio  
+  - Sortino Ratio  
+  - Volatility  
+  - Dividend Yield  
+  - Max Drawdown  
+
+- **Portfolio vs. Benchmark Comparison**
+  - Performance graph comparing selected portfolios to the chosen benchmark  
+  - Interactive crosshair enabled for detailed inspection  
+
+---
+
+### Reporting & Presentation Outputs
+
+Every portfolio simulation automatically generates downloadable reports, including:
+- Portfolio vs. Benchmark Comparison  
+- Top Allocations  
+- Portfolio Summary  
+
+Reports support company logo integration for presentation-ready outputs.
+
+---
+
+### Advanced Data Analysis & Export
+
+- **Risk-Reward Portfolio Table**
+  - Displays sortable efficient portfolios with filters for:
+    - Ticker  
+    - Portfolio Allocation  
+    - Dividend Yield  
+    - Volatility  
+
+- **Correlation Table**
+  - Shows correlation between all portfolio assets  
+
+- **Excel Data Export**
+  - Users can download full simulation data in Excel format for independent analysis and manipulation, including:
+    - Returns and cumulative returns  
+    - Covariance and correlation matrices  
+    - Efficient frontier data  
+    - Portfolio-level returns  
+
+---
+
+## Core System Components
+
+- **Backend Engineering** – APIs, data ingestion, risk and return calculations.  
+- **Quantitative Models** – Mean-variance optimization, Sortino and Sharpe analysis, dividend yield targeting, and max drawdown tracking.  
+- **AI Integration** – Market event summarization and strategy recommendations powered by OpenAI.  
+- **Frontend/UI** – Fully interactive dashboards built with Streamlit.  
+- **Authentication & Access Control** – Firebase-backed user management.  
+- **Cloud Deployment** – Production-ready for hosting and scaling.
+
+---
+
+## Features (Summary)
+
+- Portfolio optimization using mean-variance, dividend-focused, and AI-refined strategies  
+- Risk metrics including Sharpe ratio, Sortino ratio, downside deviation, and maximum drawdown  
+- Custom portfolio analysis, backtesting, and performance simulation  
+- Market event summaries and contextual insights for portfolio assets  
+- Pro Mode (disabled in this release); open-source version includes a full analytics environment for experimentation
 
 ---
 
