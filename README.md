@@ -64,6 +64,8 @@ Delivered asynchronously to the user in under two minutes.
 
 ---
 
+
+
 ## Portfolio Outputs, Reporting & Data Export
 
 ### Portfolio Breakdown & Visualization
@@ -102,7 +104,6 @@ Every portfolio simulation automatically generates downloadable reports, includi
 Reports support company logo integration for presentation-ready outputs.
 
 ---
-
 ### Advanced Data Analysis & Export
 
 - **Risk-Reward Portfolio Table**
@@ -121,7 +122,6 @@ Reports support company logo integration for presentation-ready outputs.
     - Covariance and correlation matrices  
     - Efficient frontier data  
     - Portfolio-level returns  
-
 ---
 
 ## Core System Components
@@ -132,18 +132,10 @@ Reports support company logo integration for presentation-ready outputs.
 - **Frontend/UI** – Fully interactive dashboards built with Streamlit.  
 - **Authentication & Access Control** – Firebase-backed user management.  
 - **Cloud Deployment** – Production-ready for hosting and scaling.
-
 ---
 
-## Features (Summary)
 
-- Portfolio optimization using mean-variance, dividend-focused, and AI-refined strategies  
-- Risk metrics including Sharpe ratio, Sortino ratio, downside deviation, and maximum drawdown  
-- Custom portfolio analysis, backtesting, and performance simulation  
-- Market event summaries and contextual insights for portfolio assets  
-- Pro Mode (disabled in this release); open-source version includes a full analytics environment for experimentation
 
----
 
 ## 🛠 Installation
 
