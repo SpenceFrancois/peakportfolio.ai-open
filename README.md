@@ -1,14 +1,15 @@
 # PeakPortfolio.ai – Open Source Edition
 
-**PeakPortfolio.ai** is an AI-powered portfolio analysis and optimization platform that blends quantitative finance, market data pipelines, and AI-driven insights into a single, intuitive application. This repository contains the **open-source version** of the app — everything you need to run it locally, explore the algorithms, and extend the features for your own projects.
-
----
-
 ## Overview
 
-PeakPortfolio connects portfolio optimization, asset-level data, prompt engineering, and context-aware AI—allowing users to express investment goals in their own words and receive a personalized portfolio that is constructed, reviewed, and explained by AI agents. The system puts quantitative data into context, then builds a custom portfolio around user intent.
+PeakPortfolio.ai is an investment portfolio construction application that allows users to express investment goals, ideas, and their own analysis in natural language and receive a personalized portfolio that is constructed, reviewed, and explained through a structured, multi-stage workflow.
+
+The platform connects portfolio optimization, asset-level data, prompt engineering, and AI agent chains into a single, intuitive system. PeakPortfolio builds portfolios around user intent, MVO portfolios, asset-level data, and explicit constraints, delivering allocations alongside performance metrics and explanations for each allocation.
+
+This repository contains the open-source version of the application — everything required to run it locally, explore the underlying algorithms, and extend the system for experimentation or further development.
 
 Built over **8 months by Spencer Francois**, PeakPortfolio.ai demonstrates the integration of portfolio allocation, artificial intelligence, and software engineering into a coherent, easy-to-use system.
+
 
 ---
 
@@ -18,8 +19,10 @@ Built over **8 months by Spencer Francois**, PeakPortfolio.ai demonstrates the i
 
 The process begins with:
 - User-supplied asset tickers  
-- A natural-language investment brief  
-
+- A natural-language investment brief
+- Analysis start and end dates
+- Minimum and maximum portfolio weights
+ 
 A mean-variance optimization (MVO) engine then computes three reference portfolios:
 
 - **Minimum Volatility**
