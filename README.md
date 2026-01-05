@@ -11,7 +11,7 @@ PeakPortfolio.ai explores a unified approach to expressing, constructing, and ev
 ### How portfolio construction is approached
 Portfolio construction begins with quantitative baselines derived from multiple MVO portfolios and single-asset portfolios. These baselines provide context for reconstructing portfolios around user defined intent expressed in natural language.
 
-User intent, MVO portfolios, asset-level data, and explicit constraints are sent through a chain of three AI agents (Allocator, Manager, Explainer) that each work on a specific component of portfolio construction, to produce portfolio allocations with associated performance metrics, and explanations for ticker of the portfolio.
+User intent, MVO portfolios, asset-level data, and explicit constraints are sent through a chain of three AI agents (Allocator, Manager, Explainer), each working on a specific component of portfolio construction, to produce portfolio allocations with associated performance metrics and explanations for the portfolio’s tickers.
 
 ### Human judgment and system support
 
