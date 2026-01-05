@@ -5,6 +5,7 @@ PeakPortfolio.ai is an investment portfolio construction application that allows
 
 ### The problem this is designed to solve
 Modern portfolio construction relies on both quantitative optimization and qualitative investment judgment, which are often handled through separate tools and workflows.
+
 PeakPortfolio.ai explores a unified approach to expressing, constructing, and evaluating portfolios in one structured system.
 
 ### How portfolio construction is approached
