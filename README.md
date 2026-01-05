@@ -3,16 +3,16 @@
 ## What peakportfolio does
 PeakPortfolio.ai is an investment portfolio construction application that allows users to express investment goals, ideas, and their own analysis in natural language and receive a personalized portfolio that is constructed, reviewed, and explained through a structured, multi-stage workflow.
 
-## The problem this is designed to solve
+### The problem this is designed to solve
 Modern portfolio construction relies on both quantitative optimization and qualitative investment judgment, which are often handled through separate tools and workflows.
 PeakPortfolio.ai explores a unified approach to expressing, constructing, and evaluating portfolios in one structured system.
 
-## How portfolio construction is approached
+### How portfolio construction is approached
 Portfolio construction begins with quantitative baselines derived from multiple MVO portfolios and single-asset portfolios. These baselines provide context for reconstructing portfolios around user defined intent expressed in natural language.
 
 User intent, MVO portfolios, asset-level data, and explicit constraints are sent through a chain of three AI agents (Allocator, Manager, Explainer) that each work on a specific component of portfolio construction, to produce portfolio allocations with associated performance metrics, and explanations for ticker of the portfolio.
 
-## What the system decides vs. what remains human judgment
+### What the system decides vs. what remains human judgment
 
 PeakPortfolio.ai operates as a decision-support system rather than a fully autonomous allocator. The system constructs and evaluates portfolios based on the inputs it receives, applying optimization techniques, asset-level data, and explicit constraints to generate proposed allocations and performance metrics.
 
