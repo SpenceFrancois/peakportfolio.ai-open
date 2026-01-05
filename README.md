@@ -1,12 +1,22 @@
 # PeakPortfolio.ai – Open Source Edition
 
-## Overview
-
+## What peakportfolio does
 PeakPortfolio.ai is an investment portfolio construction application that allows users to express investment goals, ideas, and their own analysis in natural language and receive a personalized portfolio that is constructed, reviewed, and explained through a structured, multi-stage workflow.
 
-The platform connects portfolio optimization, asset-level data, prompt engineering, and AI agent chains into a single, intuitive system. PeakPortfolio builds portfolios around user intent, MVO portfolios, asset-level data, and explicit constraints, delivering allocations alongside performance metrics and explanations for each allocation.
+## The problem this is designed to solve
+Modern portfolio construction relies on both quantitative optimization and qualitative investment judgment, which are often handled through separate tools and workflows.
+PeakPortfolio.ai explores a unified approach to expressing, constructing, and evaluating portfolios in one structured system.
 
-This repository contains the open-source version of the application — everything required to run it locally, explore the underlying algorithms, and extend the system for experimentation or further development.
+## How portfolio construction is approached
+Portfolio construction begins with quantitative baselines derived from multiple MVO portfolios and single-asset portfolios. These baselines provide context for reconstructing portfolios around user defined intent expressed in natural language.
+
+User intent, MVO portfolios, asset-level data, and explicit constraints are sent through a chain of three AI agents (Allocator, Manager, Explainer) that each work on a specific component of portfolio construction, to produce portfolio allocations with associated performance metrics, and explanations for ticker of the portfolio.
+
+## What the system decides vs. what remains human judgment
+
+PeakPortfolio.ai operates as a decision-support system rather than a fully autonomous allocator. The system constructs and evaluates portfolios based on the inputs it receives, applying optimization techniques, asset-level data, and explicit constraints to generate proposed allocations and performance metrics.
+
+Human judgment remains central: users define the investment universe, objectives, constraints, and interpret the resulting portfolios. The system’s role is to structure, evaluate, and explain portfolio outcomes, not to replace discretionary decision-making.
 
 
 ---
