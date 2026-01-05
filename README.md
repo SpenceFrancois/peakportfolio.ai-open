@@ -30,12 +30,10 @@ PeakPortfolio is designed to support human portfolio decision-making, not to rep
 
 ---
 
-<br><br><br>
+<br><br>
 
 ## Technical Overview
-
 ---
-
 ### 1. Input & Baselines
 
 The process begins with:
@@ -87,11 +85,10 @@ Final output includes allocations, performance metrics, and human-grade explanat
 Delivered asynchronously to the user in under two minutes.
 
 ---
+<br><br>
 
 ## Portfolio Outputs, Reporting & Data Export
-
 ---
-
 ### Portfolio Breakdown & Visualization
 
 - **Pick A Portfolio**
