@@ -4,7 +4,7 @@
 
 ### What peakportfolio does
 
-**PeakPortfolio.ai** is an investment portfolio construction application that allows users to express investment goals, ideas, and their own analysis in natural language and receive a personalized portfolio that is constructed, reviewed, and explained through a structured, multi-stage workflow.
+**PeakPortfolio** is an investment portfolio construction application that allows users to express investment goals, ideas, and their own analysis in natural language and receive a personalized portfolio that is constructed, reviewed, and explained through a structured, multi-stage workflow.
 
 ---
 
