@@ -13,7 +13,7 @@ Portfolio construction begins with quantitative baselines derived from multiple 
 
 User intent, MVO portfolios, asset-level data, and explicit constraints are sent through a chain of three AI agents (Allocator, Manager, Explainer) that each work on a specific component of portfolio construction, to produce portfolio allocations with associated performance metrics, and explanations for ticker of the portfolio.
 
-### What the system decides vs. what remains human judgment
+### Human judgment first, system second
 
 PeakPortfolio is designed to support human portfolio decision-making, not to replace it. Users define the investment universe, objectives, constraints, and retain full discretion over portfolio decisions.
 
