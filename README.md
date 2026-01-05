@@ -15,10 +15,9 @@ User intent, MVO portfolios, asset-level data, and explicit constraints are sent
 
 ### What the system decides vs. what remains human judgment
 
-PeakPortfolio.ai operates as a decision-support system rather than a fully autonomous allocator. The system constructs and evaluates portfolios based on the inputs it receives, applying optimization techniques, asset-level data, and explicit constraints to generate proposed allocations and performance metrics.
+PeakPortfolio is designed to support human portfolio decision-making, not to replace it. Users define the investment universe, objectives, constraints, and retain full discretion over portfolio decisions.
 
-Human judgment remains central: users define the investment universe, objectives, constraints, and interpret the resulting portfolios. The system’s role is to structure, evaluate, and explain portfolio outcomes, not to replace discretionary decision-making.
-
+The system structures inputs, evaluates portfolio outcomes using quantitative methods and asset-level data, and provides allocations with associated metrics and explanations to support analysis and review.
 
 ---
 
