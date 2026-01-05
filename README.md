@@ -1,21 +1,32 @@
 # PeakPortfolio.ai – Open Source Edition
 
+---
+
 ### What peakportfolio does
-PeakPortfolio.ai is an investment portfolio construction application that allows users to express investment goals, ideas, and their own analysis in natural language and receive a personalized portfolio that is constructed, reviewed, and explained through a structured, multi-stage workflow.
+
+**PeakPortfolio.ai** is an investment portfolio construction application that allows users to express investment goals, ideas, and their own analysis in natural language and receive a personalized portfolio that is constructed, reviewed, and explained through a structured, multi-stage workflow.
+
+---
 
 ### The problem this is designed to solve
+
 Modern portfolio construction relies on both quantitative optimization and qualitative investment judgment, which are often handled through separate tools and workflows.
 
 PeakPortfolio.ai explores a unified approach to expressing, constructing, and evaluating portfolios in one structured system.
 
+---
+
 ### How portfolio construction is approached
+
 Portfolio construction begins with quantitative baselines derived from multiple MVO portfolios and single-asset portfolios. These baselines provide context for reconstructing portfolios around user defined intent expressed in natural language.
 
 User intent, MVO portfolios, asset-level data, and explicit constraints are sent through a chain of three AI agents (Allocator, Manager, Explainer), each working on a specific component of portfolio construction, to produce portfolio allocations with associated performance metrics and explanations for the portfolio’s tickers.
 
+---
+
 ### Human judgment and system support
 
-PeakPortfolio is designed to support human portfolio decision-making, not to replace it. Users define the investment universe, objectives, constraints, and retain full discretion over portfolio decisions.
+**PeakPortfolio** is designed to support human portfolio decision-making, not to replace it. Users define the investment universe, objectives, constraints, and retain full discretion over portfolio decisions.
 
 The system structures inputs, evaluates portfolio outcomes using quantitative methods and asset-level data, and provides allocations with associated metrics and explanations to support analysis and review.
 
@@ -23,19 +34,21 @@ The system structures inputs, evaluates portfolio outcomes using quantitative me
 
 ## Technical Overview
 
+---
+
 ### 1. Input & Baselines
 
 The process begins with:
 - User-supplied asset tickers  
-- A natural-language investment brief
-- Analysis start and end dates
-- Minimum and maximum portfolio weights
- 
+- A natural-language investment brief  
+- Analysis start and end dates  
+- Minimum and maximum portfolio weights  
+
 A mean-variance optimization (MVO) engine then computes three reference portfolios:
 
-- **Minimum Volatility**
-- **Maximum Sharpe Ratio**
-- **Maximum Return**
+- **Minimum Volatility**  
+- **Maximum Sharpe Ratio**  
+- **Maximum Return**  
 
 These portfolios serve as quantitative performance baselines for downstream analysis and AI-driven portfolio construction.
 
@@ -75,18 +88,19 @@ Delivered asynchronously to the user in under two minutes.
 
 ---
 
-
-
 ## Portfolio Outputs, Reporting & Data Export
+
+---
 
 ### Portfolio Breakdown & Visualization
 
-- **Pick A Portfolio** – Five interactive tabs displaying different portfolio breakdowns with:
-  - Ticker  
-  - Asset Name  
-  - Asset Type  
-  - Dollar Allocation  
-  - Percent Allocation  
+- **Pick A Portfolio**
+  - Five interactive tabs displaying different portfolio breakdowns with:
+    - Ticker  
+    - Asset Name  
+    - Asset Type  
+    - Dollar Allocation  
+    - Percent Allocation  
 
 - **Allocation Snapshot**
   - Donut chart for top-weighted allocations  
@@ -115,6 +129,7 @@ Every portfolio simulation automatically generates downloadable reports, includi
 Reports support company logo integration for presentation-ready outputs.
 
 ---
+
 ### Data Analysis & Export
 
 - **Risk-Reward Portfolio Table**
@@ -133,25 +148,23 @@ Reports support company logo integration for presentation-ready outputs.
     - Covariance and correlation matrices  
     - Efficient frontier data  
     - Portfolio-level returns  
+
 ---
 
 ## Core System Components
 
-- **Backend Engineering** – APIs, data ingestion, risk and return calculations.  
-- **Quantitative Models** – Mean-variance optimization, Sortino and Sharpe analysis, dividend yield targeting, and max drawdown tracking.  
-- **AI Integration** – Market event summarization and strategy recommendations powered by OpenAI.  
-- **Frontend/UI** – Fully interactive dashboards built with Streamlit.  
-- **Authentication & Access Control** – Firebase-backed user management.  
-- **Cloud Deployment** – Production-ready for hosting and scaling.
+- **Backend Engineering** – APIs, data ingestion, risk and return calculations  
+- **Quantitative Models** – Mean-variance optimization, Sortino and Sharpe analysis, dividend yield targeting, and max drawdown tracking  
+- **AI Integration** – Market event summarization and strategy recommendations powered by OpenAI  
+- **Frontend/UI** – Fully interactive dashboards built with Streamlit  
+- **Authentication & Access Control** – Firebase-backed user management  
+- **Cloud Deployment** – Production-ready for hosting and scaling  
+
 ---
-
-
-
 
 ## 🛠 Installation
 
 ```bash
-
 # 1. Install dependencies
 pip install -r requirements.txt
 
@@ -162,6 +175,7 @@ OPENAI_API_KEY=your_openai_key
 
 #3. Run locally
 streamlit run app.py
+
 ```
 
 ---
