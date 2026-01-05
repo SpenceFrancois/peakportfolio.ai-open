@@ -29,7 +29,8 @@ User intent, MVO portfolios, asset-level data, and explicit constraints are sent
 PeakPortfolio is designed to support human portfolio decision-making, not to replace it. Users define the investment universe, objectives, constraints, and retain full discretion over portfolio decisions.
 
 ---
-
+-
+-
 ## Technical Overview
 
 ---
