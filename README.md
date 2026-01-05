@@ -4,7 +4,7 @@
 
 ### What peakportfolio does
 
-**PeakPortfolio** is an investment portfolio construction application that allows users to express investment goals, ideas, and their own analysis in natural language and receive a personalized portfolio that is constructed, reviewed, and explained through a structured, multi-stage workflow.
+PeakPortfolio is an investment portfolio construction application that allows users to express investment goals, ideas, and their own analysis in natural language and receive a personalized portfolio that is constructed, reviewed, and explained through a structured, multi-stage workflow.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Modern portfolio construction relies on both quantitative optimization and qualitative investment judgment, which are often handled through separate tools and workflows.
 
-PeakPortfolio.ai explores a unified approach to expressing, constructing, and evaluating portfolios in one structured system.
+PeakPortfolio explores a unified approach to expressing, constructing, and evaluating portfolios in one structured system.
 
 ---
 
@@ -26,7 +26,7 @@ User intent, MVO portfolios, asset-level data, and explicit constraints are sent
 
 ### Human judgment and system support
 
-**PeakPortfolio** is designed to support human portfolio decision-making, not to replace it. Users define the investment universe, objectives, constraints, and retain full discretion over portfolio decisions.
+PeakPortfolio is designed to support human portfolio decision-making, not to replace it. Users define the investment universe, objectives, constraints, and retain full discretion over portfolio decisions.
 
 The system structures inputs, evaluates portfolio outcomes using quantitative methods and asset-level data, and provides allocations with associated metrics and explanations to support analysis and review.
 
