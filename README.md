@@ -153,16 +153,6 @@ Reports support company logo integration for presentation-ready outputs.
     - Efficient frontier data  
     - Portfolio-level returns  
 
----
-
-## Core System Components
-
-- **Backend Engineering** – APIs, data ingestion, risk and return calculations  
-- **Quantitative Models** – Mean-variance optimization, Sortino and Sharpe analysis, dividend yield targeting, and max drawdown tracking  
-- **AI Integration** – Market event summarization and strategy recommendations powered by OpenAI  
-- **Frontend/UI** – Fully interactive dashboards built with Streamlit  
-- **Authentication & Access Control** – Firebase-backed user management  
-- **Cloud Deployment** – Production-ready for hosting and scaling  
 
 ---
 
