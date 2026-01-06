@@ -155,8 +155,8 @@ Reports support company logo integration for presentation-ready outputs.
 
 
 ---
-
-## 🛠 Installation
+<br><br>
+## Installation
 
 ```bash
 # 1. Install dependencies
