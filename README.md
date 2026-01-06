@@ -44,9 +44,9 @@ The process begins with:
 
 A mean-variance optimization (MVO) engine then computes three reference portfolios:
 
-- **Minimum Volatility**  
-- **Maximum Sharpe Ratio**  
-- **Maximum Return**  
+- Minimum Volatility
+- Maximum Sharpe Ratio  
+- Maximum Return
 
 These portfolios serve as quantitative performance baselines for downstream analysis and AI-driven portfolio construction.
 
@@ -55,7 +55,9 @@ These portfolios serve as quantitative performance baselines for downstream anal
 ### 2. Decision Structure & Separation of Responsibilities
 Using a structure of multiple AI agents performing scoped tasks allows for efficient processing of both quantitative and qualitative context, including single-asset portfolios, MVO reference portfolios, and user intent expressed in natural language. 
 
-Separating responsibilities across three agents reduces hallucination risk by limiting each agent’s scope to a specific function. This structure helps defend against hallucinated outputs, faulty formats, and invalid or arbitrary allocations. By constraining each stage of the process, portfolios can be analyzed, allocated, reviewed, and explained with greater intent, consistency, and control.
+Separating responsibilities across three agents reduces hallucination risk by limiting each agent’s scope to a specific function. This structure helps defend against hallucinated outputs, faulty formats, and invalid or arbitrary allocations. 
+
+By constraining each stage of the process, portfolios can be analyzed, allocated, reviewed, and explained with greater intent, consistency, and control.
 
 ### Allocator Agent
 
