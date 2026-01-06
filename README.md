@@ -51,7 +51,6 @@ A mean-variance optimization (MVO) engine then computes three reference portfoli
 These portfolios serve as quantitative performance baselines for downstream analysis and AI-driven portfolio construction.
 
 ## Decision Structure & Separation of Responsibilities
----
 
 ### Allocator Agent
 
