@@ -185,7 +185,6 @@ A hosted version of PeakPortfolio.ai is available here:
 ##  Acknowledgements
 
 - [Tiingo](https://www.tiingo.com/) – Financial market data
-- [Yahoo Finance](https://pypi.org/project/yfinance/) – Historical data and news
 - [OpenAI](https://openai.com/) – AI-powered market summaries and analysis
 - [Streamlit](https://streamlit.io/) – Application framework
 - [Firebase](https://firebase.google.com/) – Authentication and user management
