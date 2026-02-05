@@ -1,5 +1,4 @@
 # PeakPortfolio.ai – Open Source Edition
-<sub><i>Explore, learn from, and build on this project for personal, educational, and research use — source-available under the PolyForm Noncommercial License; commercial use requires permission.</i></sub>
 
 ---
 
