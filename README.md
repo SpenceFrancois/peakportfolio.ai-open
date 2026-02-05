@@ -1,6 +1,7 @@
 # PeakPortfolio.ai – Open Source Edition
 <sub><i>Explore, learn from, and build on this project for personal, educational, and research use — source-available under the PolyForm Noncommercial License; commercial use requires permission.</i></sub>
 
+---
 ### What peakportfolio does
 
 PeakPortfolio is an investment portfolio construction application that allows users to express investment goals, ideas, and their own analysis in natural language and receive a personalized portfolio that is constructed, reviewed, and explained through a structured, multi-stage workflow.
