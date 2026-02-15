@@ -152,7 +152,7 @@ def main():
         </div>
         <!-- Footer -->
         <div class="footer">
-            PeakPortfolio™
+            PeakPortfolio
         </div>
         """,
         unsafe_allow_html=True
@@ -168,4 +168,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
