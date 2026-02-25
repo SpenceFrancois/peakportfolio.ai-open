@@ -41,13 +41,18 @@ The process begins with:
 - Analysis start and end dates  
 - Minimum and maximum portfolio weights  
 
-A mean-variance optimization (MVO) engine then computes three reference portfolios:
+A mean-variance optimization (MVO) engine computes three reference portfolios:
 
 - Minimum Volatility
-- Maximum Sharpe Ratio  
+- Maximum Sharpe Ratio
 - Maximum Return
 
-These portfolios serve as quantitative performance baselines for downstream analysis and AI-driven portfolio construction.
+In addition to these optimized portfolios, the system also constructs:
+
+- Highest Dividend Yield Portfolio
+- Single-Asset Portfolios (one for each user-supplied ticker)
+
+These reference portfolios serve as quantitative performance baselines, providing both optimized and concentration-oriented points of comparison for downstream analysis and AI-driven portfolio construction.
 
 <br>
 
