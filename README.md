@@ -11,7 +11,7 @@ PeakPortfolio is an investment portfolio construction application that allows us
 
 Modern portfolio construction draws on multiple forms of analysis and judgment, which are frequently executed through separate tools and workflows.
 
-PeakPortfolio explores a unified approach to expressing, constructing, and evaluating portfolios in one structured system.
+PeakPortfolio explores a approach to expressing, constructing, and evaluating portfolios in one structured system.
 
 ---
 
